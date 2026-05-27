@@ -1,0 +1,150 @@
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --black:#150203;
+    --gray:#726f70;
+    
+}
+.container{
+    display:grid;
+    height: 100vh;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr .5fr 2fr 1.5fr .5fr;
+grid-gap:.05em;
+grid-template-areas: 
+" menu menu  "
+"photo aboutme"
+"projects Experince"
+"Education Blogs"
+"footer footer"
+
+;
+}
+.section1{
+  font-size:25px;
+   
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+   
+}
+.menu{
+    grid-area:menu;
+background-color:rgb(4, 120, 187);
+border-radius: var(--main-radius);
+padding:var(--main-padding);
+justify-content: space-between;
+display: flex;
+
+}
+.section1 img{
+    
+    width:45%;
+    height:50%;
+    margin-top: 5px;
+    margin-bottom:10px;
+}
+.section2 h1{
+    color:black;
+    text-decoration: underline;
+}
+#photo{
+grid-area:photo;
+background-color:rgb(185, 12, 12);
+border-radius: var(--main-radius);
+padding:var(--main-padding);
+text-decoration: underline;
+text-align:center;
+}
+#aboutme{
+     grid-area:aboutme;
+    background-color: gray;
+    padding:var(--main-padding);
+    line-height: 2;
+
+border-radius: var(--main-radius);
+}
+#projects{
+    grid-area:projects;
+    background-color: gray;
+    padding:var(--main-padding);
+    border-radius: var(--main-radius);
+    font-size: 15;
+}
+#Experince{
+    grid-area:Experince;
+    background-color: rgba(4, 108, 61, 0.589);
+    padding:var(--main-padding);
+    border-radius: var(--main-radius);
+    line-height: 2;
+}
+.section2 img{
+width:45%;
+margin-left: 150px;
+margin-bottom: 15px;
+height: 25%;
+}
+.section2{
+  font-size:20px;
+}
+.section2 h1{
+    color:black;
+    text-decoration: underline;
+}
+#Education{
+    grid-area:Education;
+    background-color: rgb(123, 5, 102);
+    padding:var(--main-padding);
+    border-radius: var(--main-radius);
+}
+.section3 h1{
+    color:black;
+    text-decoration: underline;
+}
+.section3{
+    font-size: 25px;
+}
+#Blogs{
+    grid-area:Blogs;
+    background-color: gray;
+    padding:var(--main-padding);
+    border-radius: var(--main-radius);
+}
+.Footer a{
+    color:#150203;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 17px;
+}
+.Footer{
+    grid-area:footer;
+    background-color: rgb(4, 120, 187);
+    padding:var(--main-padding);
+    border-radius: var(--main-radius);
+justify-content: space-between;
+display: flex;
+text-align: center;
+}
+.Footer h2{
+    font-size: 20px;
+}
+@media only screen and  (max-width: 500px){
+ .container{
+   grid-template-columns: 1fr;
+   grid-template-rows: .5fr 1.5fr 1fr 1fr 1fr 1fr 1.5fr .5fr;
+   grid-template-areas:
+   "menu"
+   "photo"
+   "aboutme"
+   "projects"
+   "Experince"
+   "Education"
+   "Blogs"
+   "footer"  
+   ;
+ }
+
+}
